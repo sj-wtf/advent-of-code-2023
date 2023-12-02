@@ -1,6 +1,3 @@
-import re
-import string
-
 line_digits = []
 
 with open('input_data.txt') as input:
