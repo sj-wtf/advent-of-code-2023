@@ -3,7 +3,7 @@ part_numbers = []
 
 with open('input_data.txt') as input:
   for line in input:
-    filechars.append(list(line.strip()))
+    filechars.append(list(line))
 
 # This is a bit dense
 
@@ -22,7 +22,7 @@ for x, line in enumerate(filechars):
         print(f'Y indexes: {y_indexes}, X indexes: {x_indexes}')
         for y_idx in y_indexes:
           for x_idx in x_indexes:
-            if not filechars[x_idx][y_idx].isdigit() and filechars[x_idx][y_idx] != '.':
+            if not filechars[x_idx][y_idx].isdigit() and filechars[x_idx][y_idx] != '.' and filechars[x_idx][y_idx] != '\n':
               candidate_pass = True
 
         if candidate_pass:
